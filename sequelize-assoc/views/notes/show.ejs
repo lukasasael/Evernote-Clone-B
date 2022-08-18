@@ -1,0 +1,23 @@
+<%- include('../partials/head'); %>
+
+<p>Detalhes da nota <b><%= note.title %></b></p>
+
+<hr />
+<h3>título: <%= note.title %></h3>
+<%- include('./_card'); -%>
+
+<p>
+    <a href="/<%= note.id %>/edit">
+        Editar
+    </a>
+    |
+    Excluir
+</p>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(e) {
+        console.log('carregou a view notes/show.ejs');
+    });
+</script>
+
+<%- include('../partials/footer'); %>

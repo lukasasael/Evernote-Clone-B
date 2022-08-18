@@ -1,0 +1,15 @@
+<%- include('../partials/head'); %>
+
+<p>Edição da nota <b><%= note.title %></b></p>
+
+<hr />
+<form action="/notes/<%= note.id %>" method="post">
+    <input type="hidden" name="_method" value="put" />
+    <input type="hidden" name="note_id" value="<%= note.id %>" />
+
+    <%- include('./_form'); -%>
+
+    <button type="submit">Atualizar</button>
+</form>
+
+<%- include('../partials/footer'); %>

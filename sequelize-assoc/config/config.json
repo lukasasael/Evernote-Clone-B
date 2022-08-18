@@ -1,0 +1,28 @@
+{
+  "development": {
+    "username": "evernoteclone",
+    "password": "evernoteclone",
+    "database": "evernoteclone",
+    "host": "127.0.0.1",
+    "port": "5432",
+    "dialect": "postgres",
+    "logging": false,
+    "migrationStorageTableName": "sequelize_meta"    
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "migrationStorageTableName": "sequelize_meta"
+  },
+  "production": {
+    "username": "root",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "migrationStorageTableName": "sequelize_meta"
+  }
+}

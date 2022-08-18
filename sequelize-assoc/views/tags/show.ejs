@@ -1,0 +1,35 @@
+<%- include('../partials/head'); %>
+
+<p>Etiqueta <%= tag.name -%></p>
+
+<div>
+<% for(let i=0; i < tag.notes.length; i++) { %>
+    <% 
+    const note = tag.notes[i];
+    if (i>0) { -%>
+    <hr />
+    <% } -%>
+    <h1>título: <%= note.title %></h1>
+    <%- include('../notes/_card', {note, tags, categories}); -%>
+    <ul class="nav_links">
+        <li>
+            <a href="/<%= note.id %>">
+                Ver mais
+            </a>
+        </li>
+        <li>
+            <a href="/<%= note.id %>/edit">
+                Editar
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                Excluir
+            </a>
+        </li>
+    </ul>
+    
+<% } %>
+</div>
+
+<%- include('../partials/footer'); %>

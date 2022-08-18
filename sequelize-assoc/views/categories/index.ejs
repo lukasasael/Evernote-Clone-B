@@ -1,0 +1,20 @@
+<%- include('../partials/head'); %>
+
+<p>Categorias:</p>
+
+<div>
+<% for(let i=0; i < categories.length; i++) { %>
+    <% 
+    const category = categories[i];
+    if (i>0) { -%>
+    <hr />
+    <% } -%>
+    <div>
+        <a href="/categories/<%= category.id %>">
+            <%= category.name -%> (<%= category.notes.length -%>)
+        </a>
+    </div>
+<% } %>
+</div>
+
+<%- include('../partials/footer'); %>

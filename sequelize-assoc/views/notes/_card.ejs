@@ -1,0 +1,12 @@
+<p>Corpo: <%= note.body %></p>
+<p>Categoria: <%= note.category.name -%> </p>
+<p>Etiquetas (<%= note.tags.length %>):
+<%  for(let i=0; i< note.tags.length; i++) { -%>
+    <% if(i>0) { -%>
+        ,
+    <% } -%>
+    <%=note.tags[i].name-%>
+<% } -%>
+</p>
+<p>Criada quando: <%= note.createdAt.toLocaleString(); %></p>
+<p>Atualizada em: <%= note.updatedAt.toLocaleString(); %></p>
